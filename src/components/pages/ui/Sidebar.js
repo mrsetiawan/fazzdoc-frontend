@@ -32,12 +32,12 @@ export default class Sidebar extends Component {
               <ListItemText primary="Hospital" />
             </Link>
           </ListItem>
-          <ListItem button key="Face">
+          <ListItem button key="Doctor">
             <ListItemIcon>
               <Face />
             </ListItemIcon>
             <Link to="/doctor">
-              <ListItemText primary="Face" />
+              <ListItemText primary="Doctor" />
             </Link>
           </ListItem>
           <ListItem button key="Patient">

@@ -1,0 +1,8 @@
+.list-menu {
+    width: 250px;
+}
+
+.list-menu a[href]{
+    text-decoration: none;
+    color: inherit;
+}

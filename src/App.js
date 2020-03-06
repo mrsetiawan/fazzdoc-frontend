@@ -5,6 +5,7 @@ import Sidebar from '../src/components/pages/ui/Sidebar'
 import Doctor from '../src/components/pages/doctor/List'
 import Hospital from '../src/components/pages/hospital/List'
 import Patient from '../src/components/pages/patient/List'
+import FormDoctor from '../src/components/pages/doctor/Form'
 import NotFound from '../src/components/pages/NotFound'
 
 export default class App extends Component {
@@ -29,6 +30,7 @@ export default class App extends Component {
           <Switch>
             <Route path='/' exact component={Hospital} />
             <Route path='/doctor' component={Doctor} />
+            <Route path='/entry/doctor' exact component={FormDoctor} />
             <Route path='/patient' component={Patient} />
             <Route path="*" component={NotFound} />
           </Switch>

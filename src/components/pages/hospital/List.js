@@ -46,7 +46,7 @@ export default class List extends Component {
         <Grid item xs={1}>
           <br/>
           <Link to='/entry/rs'>
-            <ButtonAction variant='contained' color='primary' startIcon={<Add />}>
+            <ButtonAction url='/entry/rs' variant='contained' color='primary' startIcon={<Add />}>
               Add 
             </ButtonAction>
           </Link>

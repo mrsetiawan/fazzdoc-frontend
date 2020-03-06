@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import ButtonAction from '../ui/ButtonAction'
 import { Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom'
 
 const styles = {
   root: {
@@ -25,9 +26,22 @@ const styles = {
 
 class Form extends Component {
 
+  state = {
+    doctor:'',
+    tlp:'',
+    spesialis:'',
+    alamat:''
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name] : [e.target.value]
+    })
+  }
+
   render() {
     const { classes } = this.props;
-
+    
     return (
       <Wrapper className={classes.root}>
         <Grid container justify='center' spacing={3}>
@@ -46,6 +60,8 @@ class Form extends Component {
                   placeholder="Placeholder"
                   fullWidth
                   margin="normal"
+                  name='doctor'
+                  onChange={this.handleChange}
                 />
                 <TextField
                   id="standard-full-width"
@@ -55,6 +71,8 @@ class Form extends Component {
                   fullWidth
                   margin="normal"
                   type='number'
+                  name='tlp'
+                  onChange={this.handleChange}
                 />
                 <TextField
                   id="standard-full-width"
@@ -63,6 +81,8 @@ class Form extends Component {
                   placeholder="Placeholder"
                   fullWidth
                   margin="normal"
+                  name='spesialis'
+                  onChange={this.handleChange}
                 />
                 <TextField
                   id="standard-full-width"
@@ -71,14 +91,18 @@ class Form extends Component {
                   placeholder="Placeholder"
                   fullWidth
                   margin="normal"
+                  name='alamat'
+                  onChange={this.handleChange}
                 />
 
                 <ButtonAction variant='contained' color='primary'>
                   Submit
                 </ButtonAction> &nbsp;&nbsp;
-                <ButtonAction variant='contained' color='secondary'>
-                  Cancel
-                </ButtonAction>
+                <Link to='/doctor'>
+                  <ButtonAction variant='contained' color='secondary'>
+                    Cancel
+                  </ButtonAction>
+                </Link>
               </Paper>
             </form>
           </Grid>

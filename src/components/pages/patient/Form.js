@@ -33,7 +33,7 @@ class Form extends Component {
         <Grid container justify='center' spacing={3}>
           <Grid item xs={12}>
             <Typography variant='h3' align='center'>
-              Entry Doctor
+              Entry Patient
             </Typography>
           </Grid>
           <Grid item xs={6}>
@@ -41,9 +41,9 @@ class Form extends Component {
               <Paper elevation={3} style={{ padding: 15 }}>
                 <TextField
                   id="standard-full-width"
-                  label="Nama Dokter"
+                  label="Nama Pasien"
                   style={{ margin: 8 }}
-                  placeholder="Placeholder"
+                  placeholder="Nama Pasien"
                   fullWidth
                   margin="normal"
                 />
@@ -55,14 +55,6 @@ class Form extends Component {
                   fullWidth
                   margin="normal"
                   type='number'
-                />
-                <TextField
-                  id="standard-full-width"
-                  label="Spesialis"
-                  style={{ margin: 8 }}
-                  placeholder="Placeholder"
-                  fullWidth
-                  margin="normal"
                 />
                 <TextField
                   id="standard-full-width"

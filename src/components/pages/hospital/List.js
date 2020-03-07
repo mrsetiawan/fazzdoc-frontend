@@ -18,12 +18,14 @@ export default class List extends Component {
   state = {
     dataTable: {
       thead: ["No", "Nama Rumah Sakit" ,"No Telepon", "Alamat"],
-      tbody: []
+      tbody: [],
+      route: '/hospital'
     }
   }
 
   componentDidMount(){
     const tbody = data.map((body,idx) => ({
+      "id": body.id,
       "No" : idx+1,
       "Nama Rumah Sakit" : body.nama_rumah_sakit,
       "No Telepon": body.tlp,
@@ -45,7 +47,7 @@ export default class List extends Component {
         </Grid>
         <Grid item xs={1}>
           <br/>
-          <Link to='/entry/rs'>
+          <Link to='/entry/hospital'>
             <ButtonAction url='/entry/rs' variant='contained' color='primary' startIcon={<Add />}>
               Add 
             </ButtonAction>

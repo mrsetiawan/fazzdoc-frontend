@@ -17,7 +17,8 @@ export default class List extends Component {
   state = {
     dataTable: {
       thead: ["No", "Nama Dokter", "No Telepon","Spesialis", "Alamat"],
-      tbody: []
+      tbody: [],
+      route: '/doctor'
     }
   }
 
@@ -25,6 +26,7 @@ export default class List extends Component {
 
     const tbody = data.map((item, idx) => ({
       "No": idx + 1,
+      "id" : item.id,
       "Nama Dokter": item.nama_dokter,
       "No Telepon" : item.tlp,
       "Spesialis": item.spesialis,

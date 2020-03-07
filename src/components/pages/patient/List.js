@@ -18,13 +18,15 @@ export default class List extends Component {
   state = {
     dataTable: {
       thead: ["No", "Nama Pasien", "No Telepon", "Alamat"],
-      tbody:[]
+      tbody:[],
+      route: '/patient'
     }
   }
 
 
   componentDidMount(){
     const tbody = data.map((body,idx) => ({
+      "id" : body.id,
       "No" : idx+1,
       "Nama Pasien" : body.pasien,
       "No Telepon": body.tlp,

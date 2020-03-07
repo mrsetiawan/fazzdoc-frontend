@@ -31,11 +31,14 @@ export default class App extends Component {
         <main>
           <Switch>
             <Route path='/' exact component={Hospital} />
-            <Route path='/entry/rs' exact component={FormRumahSakit} />
-            <Route path='/doctor' component={Doctor} />
+            <Route path='/entry/hospital' exact component={FormRumahSakit} />
+            <Route path='/hospital/:id' exact component={FormRumahSakit} />
+            <Route path='/doctor' exact component={Doctor} />
             <Route path='/entry/doctor' exact component={FormDoctor} />
-            <Route path='/patient' component={Patient} />
+            <Route path='/doctor/:id' exact component={FormDoctor} />
+            <Route path='/patient' exact component={Patient} />
             <Route path='/entry/patient' exact component={FormPatient} />
+            <Route path='/patient/:id' exact component={FormPatient} />
             <Route path="*" component={NotFound} />
           </Switch>
         </main>

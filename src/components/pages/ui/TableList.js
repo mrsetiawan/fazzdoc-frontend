@@ -6,17 +6,16 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-
 import ButtonAction from '../ui/ButtonAction'
 import DeleteIcon from '@material-ui/icons/Delete';
 import Create from '@material-ui/icons/Create';
+import { Link } from 'react-router-dom'
 
 export default class TableList extends Component {
 
   render() {
 
-    const { dataTable: { thead, tbody } } = this.props
-
+    const { dataTable: { thead, tbody, route } } = this.props
     return (
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
@@ -35,9 +34,11 @@ export default class TableList extends Component {
                   )
                 })}
                 <TableCell>
-                  <ButtonAction variant='contained' color='primary' startIcon={<Create />}>
-                    Edit
-                  </ButtonAction>
+                  <Link to={`${route}/${body.id}`}>
+                    <ButtonAction variant='contained' color='primary' startIcon={<Create />}>
+                      Edit
+                    </ButtonAction>
+                  </Link>
                   &nbsp;&nbsp;
                   <ButtonAction variant='contained' color='secondary' startIcon={<DeleteIcon />}>
                     Delete

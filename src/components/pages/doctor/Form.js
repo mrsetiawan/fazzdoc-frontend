@@ -41,13 +41,15 @@ class Form extends Component {
 
   render() {
     const { classes } = this.props;
+
+    const submitText = this.props.match.params.id ? "Update" : "Create"
     
     return (
       <Wrapper className={classes.root}>
         <Grid container justify='center' spacing={3}>
           <Grid item xs={12}>
             <Typography variant='h3' align='center'>
-              Entry Doctor
+              {submitText ? "Edit Doctor" : "Entry Doctor"}
             </Typography>
           </Grid>
           <Grid item xs={6}>
@@ -96,7 +98,7 @@ class Form extends Component {
                 />
 
                 <ButtonAction variant='contained' color='primary'>
-                  Submit
+                  {submitText}
                 </ButtonAction> &nbsp;&nbsp;
                 <Link to='/doctor'>
                   <ButtonAction variant='contained' color='secondary'>

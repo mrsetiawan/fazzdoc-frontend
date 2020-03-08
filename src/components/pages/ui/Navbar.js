@@ -26,7 +26,7 @@ export default function Navbar({handlerToggle}) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit">
-            Photos
+            Fazzdoc Admin
           </Typography>
         </Toolbar>
       </AppBar>

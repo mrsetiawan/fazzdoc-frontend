@@ -47,7 +47,7 @@ class Form extends Component {
         <Grid container justify='center' spacing={3}>
           <Grid item xs={12}>
             <Typography variant='h3' align='center'>
-              {submitText ? "Edit Patient" : "Entry Patient"}
+              {this.props.match.params.id ? "Edit Patient" : "Entry Patient"}
             </Typography>
           </Grid>
           <Grid item xs={6}>
